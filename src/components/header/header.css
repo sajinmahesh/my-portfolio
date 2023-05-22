@@ -39,7 +39,7 @@
 /* ACTIVE LINK */
 .active__link,
 .nav__link:hover {
-  color: var(--title-color-dark);
+  color: rgb(5, 71, 176);
 }
 /* ------break points------- */
 /* for medium devices */
@@ -102,4 +102,8 @@
   .nav__list {
     column-gap: 0;
   }
+}
+/* ---change background header----- */
+.scroll__header {
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.15);
 }

@@ -1,0 +1,59 @@
+.education__container {
+  max-width: 768px;
+}
+/* .education__tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--mb-2);
+} */
+.education__button {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  margin: 0 var(--mb-1);
+  cursor: pointer;
+}
+.education__button:hover {
+  color: var(--title-color-dark);
+}
+.education__icon {
+  font-size: 1.8rem;
+  margin-right: var(--mb-0-25);
+}
+.education__sections {
+  display: grid;
+  grid-template-columns: 0.7fr;
+  justify-content: center;
+}
+.education__content {
+  display: block;
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2rem 4rem;
+  border-radius: 1.25rem;
+}
+.education__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+.education__subtitle {
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+}
+.education__calender {
+  font-size: var(--small-font-size);
+  margin-bottom: 1.3rem;
+}
+.education__data {
+  text-align: center;
+}
+@media screen and (max-width: 576px) {
+}
+.education__sections {
+  grid-template-columns: 1fr;
+}
+.education__calender i {
+  margin-right: 0.2rem;
+  color: rgb(11, 11, 14);
+}
