@@ -17,10 +17,11 @@
   color: var(--title-color);
 }
 .home__social-icon:hover {
-  color: var(--title-color-dark);
+  color: rgb(23, 21, 21);
 }
 .home__title {
   /* width: 426px; */
+  font-family: var(--name-font);
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-0-25);
 }
@@ -48,13 +49,14 @@
 .home__description {
   max-width: 400px;
   margin-bottom: var(--mb-3);
+  text-align: justify;
 }
 .home__img {
   background: url(../../assets/profile-picture.jpg);
-  /* filter: grayscale(100%); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   box-shadow: 0 0 0 9px rgb(255 255 255 / 30%);
 
   order: 1;
@@ -62,7 +64,10 @@
   width: 300px;
   height: 350px;
   border-radius: 7rem;
-  /* border-radius: 60% 70% 60% 70%/40% 70% 60% 90%; */
+  border: solid 1px rgba(0, 0, 0, 0.2);
+
+  box-shadow: 255px 255px 62px -255px rgb(53 70 202 / 25%) inset, 170px 236px 17px -255px rgba(255, 255, 255, 0.9) inset,
+    -1px -4px 56px 42px rgb(0 0 0 / 25%) inset, 17px 20px 20px -4px rgb(0 0 0 / 25%);
 }
 
 .home__scroll {
@@ -120,8 +125,10 @@
   }
   .home__img {
     width: 250px;
-    height: 250px;
-    box-shadow: inset 0 0 0 8px rgb(255 255 255 / 30%);
+    height: 300px;
+    box-shadow: 255px 255px 62px -255px rgb(53 70 202 / 25%) inset,
+      170px 236px 17px -255px rgba(255, 255, 255, 0.9) inset, -1px -4px 56px 42px rgb(0 0 0 / 25%) inset,
+      17px 20px 20px -4px rgb(0 0 0 / 25%);
   }
   .home__scroll {
     margin-left: 7.5rem;
@@ -141,9 +148,11 @@
     grid-column: 1/3;
   }
   .home__img {
-    box-shadow: inset 0 0 0 6px rgb(255 255 255 / 30%);
+    box-shadow: 255px 255px 62px -255px rgb(53 70 202 / 25%) inset,
+      170px 236px 17px -255px rgba(255, 255, 255, 0.9) inset, -1px -4px 56px 42px rgb(0 0 0 / 25%) inset,
+      17px -20px 20px -4px rgb(0 0 0 / 25%);
     width: 200px;
-    height: 200px;
+    height: 250px;
   }
   .home__scroll {
     display: none;
@@ -151,10 +160,21 @@
 }
 
 /* for small devices */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 450px) {
   .home__img {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 195px;
+    box-shadow: 17px 3px 22px -10px rgb(0 0 0 / 25%);
+  }
+}
+@media screen and (max-width: 350px) {
+  section {
+    padding: 0rem 0 8rem;
+  }
+  .home__img {
+    width: 150px;
+    height: 170px;
+    box-shadow: 17px 3px 22px -10px rgb(0 0 0 / 25%);
   }
   .home__hand {
     width: 28px;

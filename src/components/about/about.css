@@ -1,5 +1,5 @@
 .about__container {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   align-items: center;
   column-gap: 4rem;
 }
@@ -36,7 +36,14 @@
   padding: 0 4rem 0 0;
   margin-bottom: var(--mb-2-5);
 }
-
+.about__data {
+  text-align: justify;
+}
+.button__arrange {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
 /* ------break points------- */
 /* for large devices */
 @media screen and (max-width: 992px) {
