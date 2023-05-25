@@ -16,17 +16,17 @@
   --body-color: hsl(var(--hue), var(--sat), 98%);
   --container-color: #fff;
   /* font and typography */
-  --name-font: "Caveat", cursive;
-  --body-font: "poppins", sans-serif;
+  --body-font: "Caveat", cursive;
+  --skill-font: "poppins", sans-serif;
   /* .5rem = 8px || 1rem = 16px */
-  --big-font-size: 3.5rem;
-  --h1-font-size: 2.5rem;
-  --h2-font-size: 1.5rem;
-  --h3-font-size: 1.25rem;
-  --normal-font-size: 1rem;
-  --small-font-size: 0.875rem;
-  --smaller-font-size: 0.831rem;
-  --tiny-font-size: 0.625rem;
+  --big-font-size: 4rem;
+  --h1-font-size: 3rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.75rem;
+  --normal-font-size: 1.5rem;
+  --small-font-size: 1.325rem;
+  --smaller-font-size: 1.321rem;
+  --tiny-font-size: 1.1rem;
   /* font weight */
   --font-normal: 400;
   --font-medium: 500;
@@ -45,17 +45,19 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+  scroll-behavior: smooth;
 }
+
 /* RESPONSIVE TYPOGRAPHY */
 @media screen and (max-width: 992px) {
   :root {
-    --big-font-size: 2.75rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1rem;
-    --normal-font-size: 0.938rem;
-    --small-font-size: 0.813rem;
-    --smaller-font-size: 0.75rem;
+    --big-font-size: 3.25rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: 1.438rem;
+    --small-font-size: 1.313rem;
+    --smaller-font-size: 1.225rem;
   }
 }
 /* ----base----- */
@@ -66,6 +68,9 @@
 }
 html {
   scroll-behavior: smooth;
+}
+body {
+  background-image: linear-gradient(to right, #ffffff, #fcfdff, #f5fcff, #edfcff, #e6fcfc);
 }
 body,
 button,

@@ -4,8 +4,8 @@
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
-  transition: box-shadow 2s ease-in-out;
+  background: linear-gradient(to right, #ffffff, #fcfdff, #f5fcff, #edfcff, #e6fcfc);
+  transition: box-shadow 1s ease-in-out;
 }
 .myname {
   font-family: var(--name-font);
@@ -45,7 +45,7 @@
 /* ACTIVE LINK */
 .active__link,
 .nav__link:hover {
-  color: rgb(5, 71, 176);
+  color: #00ecff;
 }
 /* ------break points------- */
 /* for medium devices */

@@ -2,50 +2,40 @@ import React, { useState, useEffect } from "react";
 import "./header.css";
 
 const Header = () => {
-  //----------change background header-------//
-  window.addEventListener("scroll", function () {
+  //change backround header
+  function header() {
     const header = document.querySelector(".header");
-    if (this.scrollY > 80) header.classList.add("scroll__header");
+    if (this.scrollY >= 80) header.classList.add("scroll__header");
     else header.classList.remove("scroll__header");
-  });
+  }
+  window.addEventListener("scroll", header);
+
+  // toggle menu
+  const [Toggle, showMenu] = useState(false);
+  const [activeNav, setActiveNav] = useState("#home");
 
   useEffect(() => {
-    // Add scroll event listener to update active nav link
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
+      const sections = document.querySelectorAll("section");
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-      const homeSection = document.getElementById("home");
-      const aboutSection = document.getElementById("about");
-      const skillsSection = document.getElementById("skills");
-      const educationSection = document.getElementById("education");
-      //const PortfolioSection = document.getElementById("portfolio");
-      const contactSection = document.getElementById("contact");
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
 
-      if (scrollPosition < aboutSection.offsetTop) {
-        setActiveNav("#home");
-      } else if (scrollPosition >= aboutSection.offsetTop && scrollPosition < skillsSection.offsetTop) {
-        setActiveNav("#about");
-      } else if (scrollPosition >= skillsSection.offsetTop && scrollPosition < educationSection.offsetTop) {
-        setActiveNav("#skills");
-      } else if (scrollPosition >= educationSection.offsetTop && scrollPosition < contactSection.offsetTop) {
-        setActiveNav("#education");
-        // } else if (scrollPosition >= PortfolioSection.offsetTop && scrollPosition < contactSection.offsetTop) {
-        //   setActiveNav("portfolio");
-      } else if (scrollPosition >= contactSection.offsetTop) setActiveNav("#contact");
+        if (scrollPosition >= sectionTop - sectionHeight / 3) {
+          const sectionId = section.getAttribute("id");
+          setActiveNav(`#${sectionId}`);
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const [activeNav, setActiveNav] = useState("#home");
-  // ----toggle menu ------//
-  const [Toggle, showMenu] = useState(false);
 
-  //const [activeNav, setActvieNav] = useState("#home");
   return (
     <header className="header">
       <nav className="nav container">
